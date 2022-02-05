@@ -29,4 +29,10 @@ class Test:
         expected = True
         assert first_obj == expected
 
-
+    def test_raise_exception_on_different_value(self):
+        """
+            desc: check two object using equal method having value of one object equal to another
+        """
+        first_obj = QuantityMeasurement.valueCheck("a", "a")
+        expected = True
+        assert first_obj == expected

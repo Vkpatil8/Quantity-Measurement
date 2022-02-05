@@ -2,8 +2,8 @@
 @Author: Vishal Patil
 @Date: 05-02-2022 11-00-00
 @Last Modified by: Vishal Patil
-@Last Modified time: 05-02-2022 23:30:00
-@Title : solve test case 1.3
+@Last Modified time: 05-02-2022 24:00:00
+@Title : solve test case 1.4
 """
 from measurement_exception import MeasurementException
 
@@ -30,4 +30,9 @@ class QuantityMeasurement:
         else:
             raise MeasurementException("Not equal type")
 
-
+    @staticmethod
+    def valueCheck(a, b):
+        if a == b:
+            return True
+        else:
+            raise MeasurementException("Not equal values")
