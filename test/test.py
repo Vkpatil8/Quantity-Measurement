@@ -1,4 +1,3 @@
-
 import pytest
 
 from measurement_exception import MeasurementException
@@ -18,7 +17,7 @@ class Test:
 
     def test_raise_exception_on_null_value(self):
         """
-            desc: check two object using equal method having null value in one object and same unit
+            desc: check object using equal method having null value in one object and same unit
         """
         with pytest.raises(MeasurementException) as exception:
             expected = None
@@ -26,4 +25,12 @@ class Test:
             first_obj == expected
         assert exception.value.message == "Null"
 
-
+    def test_raise_exception_on_different_type(self):
+        """
+            desc: check two object using equal method having type of one object equal to another
+        """
+        with pytest.raises(MeasurementException) as exception:
+            first_obj = QuantityMeasurement.typeCheck("a", 0)
+            expected = True
+            first_obj == expected
+        assert exception.value.message == "Not equal"

@@ -16,3 +16,9 @@ class QuantityMeasurement:
             return a
         else:
             raise MeasurementException("Null")
+
+    @staticmethod
+    def typeCheck(a, b):
+        if type(a) != type(b):
+            raise MeasurementException("Not equal")
+        return True
