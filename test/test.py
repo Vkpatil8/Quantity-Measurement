@@ -70,4 +70,12 @@ class Test:
         first_obj = QuantityMeasurement(Inch.INCH, 1)
         second_obj = QuantityMeasurement(Inch.INCH, 1)
         assert first_obj == second_obj
+
+    def test_raise_exception_on_different_type_values_for_inch_unit(self):
+        """
+            desc: check object using equal method having type of one object and same unit
+        """
+        first_obj = QuantityMeasurement(Inch.INCH, 1)
+        second_obj = QuantityMeasurement(Inch.INCH, 1)
+        assert first_obj == second_obj
         
