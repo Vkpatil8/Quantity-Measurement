@@ -62,3 +62,12 @@ class Test:
         first_obj = QuantityMeasurement(Inch.INCH, 1)
         second_obj = QuantityMeasurement(Inch.INCH, 1)
         assert first_obj == second_obj
+
+    def test_for_checking_reference_for_inch_unit(self):
+        """
+            desc: check object using equal method have same reference
+        """
+        first_obj = QuantityMeasurement(Inch.INCH, 1)
+        second_obj = QuantityMeasurement(Inch.INCH, 1)
+        assert first_obj == second_obj
+        
