@@ -35,3 +35,11 @@ class Test:
         first_obj = QuantityMeasurement("Feet", 1)
         second_obj = QuantityMeasurement("Feet", 1)
         assert first_obj == second_obj
+
+    def test_for_checking_reference(self):
+        """
+            desc: check object using equal method have same reference
+        """
+        first_obj = QuantityMeasurement("Feet", 0)
+        second_obj = QuantityMeasurement("Feet", 0)
+        assert first_obj == second_obj

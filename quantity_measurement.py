@@ -20,4 +20,5 @@ class QuantityMeasurement:
             raise MeasurementException("Different units don't have same length")
         if type(self.length) != type(other.length):
             raise MeasurementException("Have different type")
-        return True
+        if self.unit == other.unit and other.length == self.length:
+            return True
