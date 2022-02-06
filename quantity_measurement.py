@@ -2,8 +2,8 @@
 @Author: Vishal Patil
 @Date: 05-02-2022 11-00-00
 @Last Modified by: Vishal Patil
-@Last Modified time: 06-02-2022 17:30:00
-@Title : solve test refactor1
+@Last Modified time: 06-02-2022 18:00:00
+@Title : solve test for comparing two unit values
 """
 from measurement_exception import MeasurementException
 
