@@ -18,7 +18,7 @@ class Test:
         assert first_obj == second_obj
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
-                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
+                             [(Feet.FEET, 1.0, Feet.FEET, 1.0), (Inch.INCH, 12.0, Inch.INCH, 12.0)])
     def test_raise_exception_on_null_value(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check object using equal method having null value in one object and same unit
@@ -39,7 +39,7 @@ class Test:
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
                              [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
-    def test_raise_exception_on_different_value(self, first_unit, first_length, second_unit, second_length):
+    def test_check_equality(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check two object using equal method having value of one object equal to another
         """
