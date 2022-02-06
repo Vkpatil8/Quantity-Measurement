@@ -28,7 +28,7 @@ class Test:
         assert first_obj == second_obj
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
-                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
+                             [(Feet.FEET, 1.0, Feet.FEET, 1.0), (Inch.INCH, 12.0, Inch.INCH, 12.0)])
     def test_raise_exception_on_different_type_values(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check object using equal method having type of one object and same unit
@@ -38,7 +38,7 @@ class Test:
         assert first_obj == second_obj
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
-                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
+                             [(Feet.FEET, 1.0, Feet.FEET, 1.0), (Inch.INCH, 12.0, Inch.INCH, 12.0)])
     def test_check_equality(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check two object using equal method having value of one object equal to another
@@ -48,7 +48,7 @@ class Test:
         assert first_obj == second_obj
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
-                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
+                             [(Feet.FEET, 1.0, Feet.FEET, 1.0), (Inch.INCH, 12.0, Inch.INCH, 12.0)])
     def test_for_checking_reference(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check object using equal method have same reference
