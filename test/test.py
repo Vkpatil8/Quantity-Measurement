@@ -46,11 +46,19 @@ class Test:
         second_obj = QuantityMeasurement(Feet.FEET, 0)
         assert first_obj == second_obj
 
-    def test_compare_two_having_zero_values_for_inch(self):
+    def test_compare_two_having_zero_values_for_inch_unit(self):
         """
             desc: check two object using equal method having zero length
 
         """
         first_obj = QuantityMeasurement(Inch.INCH, 0)
         second_obj = QuantityMeasurement(Inch.INCH, 0)
+        assert first_obj == second_obj
+
+    def test_raise_exception_on_null_value_for_inch_unit(self):
+        """
+            desc: check object using equal method having null value in one object and same unit
+        """
+        first_obj = QuantityMeasurement(Inch.INCH, 1)
+        second_obj = QuantityMeasurement(Inch.INCH, 1)
         assert first_obj == second_obj
