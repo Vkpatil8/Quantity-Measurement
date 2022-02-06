@@ -78,4 +78,12 @@ class Test:
         first_obj = QuantityMeasurement(Inch.INCH, 1)
         second_obj = QuantityMeasurement(Inch.INCH, 1)
         assert first_obj == second_obj
+
+    def test_for_checking_equality(self):
+        """
+            desc: check two object using equal method having value of one object equal to another
+        """
+        first_obj = QuantityMeasurement(Inch.INCH, 1)
+        second_obj = QuantityMeasurement(Inch.INCH, 1)
+        assert first_obj == second_obj
         
