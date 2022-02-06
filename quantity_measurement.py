@@ -9,30 +9,20 @@ from measurement_exception import MeasurementException
 
 
 class QuantityMeasurement:
-    @staticmethod
-    def compareValue(a):
-        if a == 0:
-            return 0
-        else:
-            raise MeasurementException("Not Null")
+    def __init__(self, unit, length):
+        self.unit = unit
+        self.length = length
 
-    @staticmethod
-    def equalLength(a):
-        if a is None:
-            return True
-        else:
-            raise MeasurementException("Not Null")
+    def convert(self, unit, length):
+        return unit * length
 
-    @staticmethod
-    def typeCheck(a, b):
-        if type(a) == type(b):
-            return True
-        else:
-            raise MeasurementException("Not equal type")
-
-    @staticmethod
-    def valueCheck(a, b):
-        if a == b:
-            return True
-        else:
-            raise MeasurementException("Not equal values")
+    def __eq__(self, other):
+        if self.length is None or other.length is None:
+            raise MeasurementException("Null Value")
+        if self.unit != other.unit and other.length != self.length:
+            return self.convert(self.unit, self.length) == self.convert(other.unit, other.length)
+        if self.unit != other.unit and other.length == self.length:
+            raise MeasurementException("Different units don't have same length")
+        if type(self.length) != type(other.length):
+            raise MeasurementException("Have different type")
+        return True
