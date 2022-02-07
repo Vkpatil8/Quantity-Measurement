@@ -2,8 +2,8 @@
 @Author: Vishal Patil
 @Date: 05-02-2022 11-00-00
 @Last Modified by: Vishal Patil
-@Last Modified time: 06-02-2022 13:30:00
-@Title : solve test case 1.4
+@Last Modified time: 07-02-2022 11:35:00
+@Title : solve test case 1.6
 """
 from measurement_exception import MeasurementException
 
