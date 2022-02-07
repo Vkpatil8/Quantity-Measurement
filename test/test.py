@@ -20,15 +20,15 @@ class Test:
         second_obj = QuantityMeasurement("Feet", 1)
         assert first_obj == second_obj
 
-    def test_raise_exception_on_different_type_values(self):
+    def test_raise_exception_on_different_reference(self):
         """
             desc: check object using equal method having type of one object and same unit
         """
         first_obj = QuantityMeasurement("Feet", 0)
-        second_obj = QuantityMeasurement("Feet", 0)
+        second_obj = first_obj
         assert first_obj == second_obj
 
-    def test_raise_exception_on_different_value(self):
+    def test_raise_exception_on_different_type_of_value(self):
         """
             desc: check two object using equal method having value of one object equal to another
         """
