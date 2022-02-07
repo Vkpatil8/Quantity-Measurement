@@ -2,8 +2,8 @@
 @Author: Vishal Patil
 @Date: 05-02-2022 11-00-00
 @Last Modified by: Vishal Patil
-@Last Modified time: 06-02-2022 17:30:00
-@Title : solve test refactor1
+@Last Modified time: 07-02-2022 12:10:00
+@Title : solve test cases 1.11 - 1.15
 """
 from measurement_exception import MeasurementException
 
@@ -14,9 +14,15 @@ class QuantityMeasurement:
         self.length = length
 
     def convert(self, unit, length):
+        """
+           desc: convert values from one unit to another unit
+        """
         return unit * length
 
     def __eq__(self, other):
+        """
+           desc: check two object using equal method
+       """
         if self.length is None or other.length is None:
             raise MeasurementException("Null Value")
         if self.unit != other.unit or other.length != self.length:

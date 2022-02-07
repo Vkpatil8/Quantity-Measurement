@@ -1,3 +1,11 @@
+"""
+@Author: Vishal Patil
+@Date: 05-02-2022 11-00-00
+@Last Modified by: Vishal Patil
+@Last Modified time: 07-02-2022 12:10:00
+@Title : solve test cases 1.11 - 1.15
+"""
+
 import pytest
 
 from feet import Feet
@@ -29,6 +37,16 @@ class Test:
 
     @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
                              [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
+    def test_for_checking_reference(self, first_unit, first_length, second_unit, second_length):
+        """
+            desc: check object using equal method have same reference
+        """
+        first_obj = QuantityMeasurement(first_unit, first_length)
+        second_obj = QuantityMeasurement(second_unit, second_length)
+        assert first_obj == second_obj
+
+    @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
+                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
     def test_raise_exception_on_different_type_values(self, first_unit, first_length, second_unit, second_length):
         """
             desc: check object using equal method having type of one object and same unit
@@ -47,12 +65,4 @@ class Test:
         second_obj = QuantityMeasurement(second_unit, second_length)
         assert first_obj == second_obj
 
-    @pytest.mark.parametrize('first_unit, first_length, second_unit, second_length',
-                             [(Feet.FEET, 1.0, Inch.INCH, 12.0), (Inch.INCH, 12.0, Feet.FEET, 1.0)])
-    def test_for_checking_reference(self, first_unit, first_length, second_unit, second_length):
-        """
-            desc: check object using equal method have same reference
-        """
-        first_obj = QuantityMeasurement(first_unit, first_length)
-        second_obj = QuantityMeasurement(second_unit, second_length)
-        assert first_obj == second_obj
+
