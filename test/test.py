@@ -1,3 +1,11 @@
+"""
+@Author: Vishal Patil
+@Date: 05-02-2022 11-00-00
+@Last Modified by: Vishal Patil
+@Last Modified time: 07-02-2022 11:35:00
+@Title : solve test case 1.6
+"""
+
 from feet import Feet
 from inch import Inch
 from quantity_measurement import QuantityMeasurement
