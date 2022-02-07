@@ -1,3 +1,11 @@
+"""
+@Author: Vishal Patil
+@Date: 05-02-2022 11-00-00
+@Last Modified by: Vishal Patil
+@Last Modified time: 07-02-2022 11:45:00
+@Title : solve test case 1.8
+"""
+
 from feet import Feet
 from inch import Inch
 from quantity_measurement import QuantityMeasurement
@@ -8,7 +16,6 @@ class Test:
     def test_compare_two_having_zero_values(self):
         """
             desc: check two object using equal method having zero length
-
         """
         first_obj = QuantityMeasurement(Feet.FEET, 0)
         second_obj = QuantityMeasurement(Feet.FEET, 0)
@@ -22,6 +29,14 @@ class Test:
         second_obj = QuantityMeasurement(Feet.FEET, 1)
         assert first_obj == second_obj
 
+    def test_for_checking_reference(self):
+        """
+            desc: check object using equal method have same reference
+        """
+        first_obj = QuantityMeasurement(Feet.FEET, 0)
+        second_obj = first_obj
+        assert first_obj == second_obj
+
     def test_raise_exception_on_different_type_values(self):
         """
             desc: check object using equal method having type of one object and same unit
@@ -30,20 +45,12 @@ class Test:
         second_obj = QuantityMeasurement(Feet.FEET, 0)
         assert first_obj == second_obj
 
-    def test_raise_exception_on_different_value(self):
+    def test_raise_exception_on_different_values(self):
         """
             desc: check two object using equal method having value of one object equal to another
         """
         first_obj = QuantityMeasurement(Feet.FEET, 1)
         second_obj = QuantityMeasurement(Feet.FEET, 1)
-        assert first_obj == second_obj
-
-    def test_for_checking_reference(self):
-        """
-            desc: check object using equal method have same reference
-        """
-        first_obj = QuantityMeasurement(Feet.FEET, 0)
-        second_obj = QuantityMeasurement(Feet.FEET, 0)
         assert first_obj == second_obj
 
     def test_compare_two_having_zero_values_for_inch_unit(self):
@@ -68,6 +75,6 @@ class Test:
             desc: check object using equal method have same reference
         """
         first_obj = QuantityMeasurement(Inch.INCH, 1)
-        second_obj = QuantityMeasurement(Inch.INCH, 1)
+        second_obj = first_obj
         assert first_obj == second_obj
         
